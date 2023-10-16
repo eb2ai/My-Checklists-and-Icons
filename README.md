@@ -1,6 +1,6 @@
 # My Checklists & Icons
 
-![Demo Video](https://vimeo.com/874879882?share=copy)
+[Demo Video](https://vimeo.com/874879882?share=copy)
 
 Current version 00.50
 
