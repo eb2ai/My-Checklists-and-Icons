@@ -1,6 +1,6 @@
 # My Checklists & Icons
 
-[![Video](https://vimeo.com/874879882?share=copy)]
+![Demo Video](https://vimeo.com/874879882?share=copy)
 
 Current version 00.50
 
@@ -9,7 +9,7 @@ My Checklists & Icons is an [Obsidian](https://obsidian.md/) snippet. It will 
 ## A Note About This Approach
 This is a CSS-only approach to managing your Checklist and stand-alone icons. It makes it incredibly easy to load and swap themes. However, adding and changing icons is a little more difficult than simply uploading a file.
 
-Obsidian users tend to be a little more sophisticated and adept at managing files. I don't think this will be an issue for you. The payoff is we get a high level of compatibility and more control over our icons.
+Obsidian users tend to be more sophisticated and adept at managing files. I don't think this will be an issue for you. The payoff is we get a high level of compatibility and more control over our icons.
 
 
 ## Loading the Snippets
