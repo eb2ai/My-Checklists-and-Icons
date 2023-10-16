@@ -1,0 +1,1387 @@
+/*  Version 00.50 of My Checklist & Icons. Latest can be found at
+    https://github.com/eb2ai/My-Checklists-and-Icons
+*/
+
+/* @settings
+
+name: My Checklist & Icons
+id: DailyLog-My-Icons
+settings:
+    - 
+        id: my-info-text
+        title: What is Checklist & Icons
+        description: "Version 00.50<br /><br />*My Icons* is a way for you to manage, theme and have control over checklists and icons. More information can be found on the supporting [Github Page](https://github.com/eb2ai/My-Checklists-and-Icons)."
+        type: info-text
+        markdown: true
+    - 
+        id: my-title
+        title: Regular Icons
+        type: heading
+        level: 3
+    - 
+        id: my-info-text
+        title: Using Regular Icons
+        description: "<br /><i class=\"mi mi-sample mi-3x mi-border mi-flip\"></i> <span style=\"font-size:2em;\"></i>PREVIEW</span><br /><br />Regular Icons can be called out in your files via HTML. For example, this icon <i class=\"mi mi-sample mi-xl\"></i> is created with **&lt;i class=&quot;mi mi-sample&quot;&gt;&lt;/i&gt;** and can be placed anywhere in your file.<br /><br /><br />There are lots of styling options for the icons. More informatin on the Github"
+        type: info-text
+        markdown: true
+    - 
+        id: mi-icon-color
+        title: Default Icon Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#3580BA'
+        default-dark: '#C8C8C8'
+    - 
+        id: mi-animation-iteration-count
+        title: Animation Iterations
+        description: The number of repitions.
+        type: variable-number-slider
+        default: 1
+        min: 1
+        max: 100
+        step: 1
+    - 
+        id: mi-border-color
+        title: Border Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#3580BA'
+        default-dark: '#C8C8C8'
+    - 
+        id: mi-border-style
+        title: Border Style
+        description: Use a larger border width for double, groove and ridge.
+        type: variable-select
+        default: solid
+        options:
+            - solid
+            - dashed
+            - double
+            - dotted
+            - groove
+            - ridge
+    - 
+        id: mi-border-width
+        title: Border Width
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 100
+        step: 1
+        format: px
+    - 
+        id: mi-border-radius
+        title: Border Radius
+        type: variable-number-slider
+        default: 8
+        min: 0
+        max: 100
+        step: 1
+        format: px
+    - 
+        id: my-title
+        title: Checklist Icons
+        type: heading
+        level: 3
+    - 
+        id: my-info-text
+        title: Using Checklist Icons
+        description: "- [x] This is a **PREVIEW** checklist item<br /><br>What up with this"
+        type: info-text
+        markdown: true
+    - 
+        id: cl-icon-color
+        title: Default Icon Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#3580BA'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl0-icon-color
+        title: "- [0] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#595f72'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl1-icon-color
+        title: "- [1] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#73bbb2'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl2-icon-color
+        title: "- [2] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#a8c373'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl3-icon-color
+        title: "- [3] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#e5b567'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl4-icon-color
+        title: "- [4] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#d5763f'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl5-icon-color
+        title: "- [5] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#d04255'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl6-icon-color
+        title: "- [6] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#3580BA'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl7-icon-color
+        title: "- [7] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#3580BA'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl8-icon-color
+        title: "- [8] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#3580BA'
+        default-dark: '#C8C8C8'
+    - 
+        id: cl9-icon-color
+        title: "- [9] Default Icon Color"
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#3580BA'
+        default-dark: '#C8C8C8'
+		
+*/
+
+
+.theme-dark{
+    --mi-icon-color: #C8C8C8; 
+    --cl-icon-color: #C8C8C8; 
+}
+
+.theme-light{
+    --mi-icon-color: #3580BA;
+    --cl-icon-color: #3580BA;
+}
+
+body {
+    --fa-primary-color: #3580BA;
+    --fa-secondary-color: #3580BA;
+    --mi-animation-iteration-count: 1;
+    --mi-border-color: 3580BA;
+    --mi-border-radius: 8px;
+    --mi-border-style: solid;
+    --mi-border-width: 2px;
+
+    --mi-icon-sample: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dog"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"/><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306"/></svg>');
+
+    --cl-icon-x: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-circle"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>');
+
+    --cl-icon-space: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle"><circle cx="12" cy="12" r="10"/></svg>');
+}
+
+.mi.mi-sample:after { -webkit-mask-image: var(--mi-icon-sample); }
+.mi.mi-eb2::after { -webkit-mask-image: var(--mi-icon-brain-glass); }
+.mi.mi-arrow-progress::after { -webkit-mask-image: var(--mi-icon-arrow-progress); }
+.mi.mi-arrows-repeat::after { -webkit-mask-image: var(--mi-icon-arrows-repeat); }
+.mi.mi-arrows-turn-to-dots::after { -webkit-mask-image: var(--mi-icon-arrows-turn-to-dots); }
+.mi.mi-bag-shopping::after { -webkit-mask-image: var(--mi-icon-bag-shopping); }
+.mi.mi-ban::after { -webkit-mask-image: var(--mi-icon-ban); }
+.mi.mi-bandage::after { -webkit-mask-image: var(--mi-icon-bandage); }
+.mi.mi-bed:after { -webkit-mask-image: var(--mi-icon-bed); }
+.mi.mi-bell-on:after { -webkit-mask-image: var(--mi-icon-bell-on); }
+.mi.mi-bomb:after { -webkit-mask-image: var(--mi-icon-bomb); }
+.mi.mi-book-open-reader:after { -webkit-mask-image: var(--mi-icon-book-open-reader); }
+.mi.mi-broom-wide:after { -webkit-mask-image: var(--mi-icon-broom-wide); }
+.mi.mi-bug:after { -webkit-mask-image: var(--mi-icon-bug); }
+.mi.mi-bullseye-pointer:after { -webkit-mask-image: var(--mi-icon-bullseye-pointer); }
+.mi.mi-burger-fries:after { -webkit-mask-image: var(--mi-icon-burger-fries); }
+.mi.mi-calendar:after { -webkit-mask-image: var(--mi-icon-calendar); }
+.mi.mi-calendar-lines-pen:after { -webkit-mask-image: var(--mi-icon-calendar-lines-pen); }
+.mi.mi-capsules:after { -webkit-mask-image: var(--mi-icon-capsules); }
+.mi.mi-car:after { -webkit-mask-image: var(--mi-icon-car); }
+.mi.mi-carrot:after { -webkit-mask-image: var(--mi-icon-carrot); }
+.mi.mi-chart-network:after { -webkit-mask-image: var(--mi-icon-chart-network); }
+.mi.mi-chart-mixed-up-circle-dollar:after { -webkit-mask-image: var(--mi-icon-chart-mixed-up-circle-dollar); }
+.mi.mi-chess-rook:after { -webkit-mask-image: var(--mi-icon-chess-rook); }
+.mi.mi-circle::after { -webkit-mask-image: var(--mi-icon-circle); }
+.mi.mi-circle-1:after { -webkit-mask-image: var(--mi-icon-circle-1); }
+.mi.mi-circle-2:after { -webkit-mask-image: var(--mi-icon-circle-2); }
+.mi.mi-circle-3:after { -webkit-mask-image: var(--mi-icon-circle-3); }
+.mi.mi-circle-4:after { -webkit-mask-image: var(--mi-icon-circle-4); }
+.mi.mi-circle-5:after { -webkit-mask-image: var(--mi-icon-circle-5); }
+.mi.mi-circle-6:after { -webkit-mask-image: var(--mi-icon-circle-6); }
+.mi.mi-circle-7:after { -webkit-mask-image: var(--mi-icon-circle-7); }
+.mi.mi-circle-8:after { -webkit-mask-image: var(--mi-icon-circle-8); }
+.mi.mi-circle-9:after { -webkit-mask-image: var(--mi-icon-circle-9); }
+.mi.mi-circle-0:after { -webkit-mask-image: var(--mi-icon-circle-0); }
+.mi.mi-circle-check:after { -webkit-mask-image: var(--mi-icon-circle-check); }
+.mi.mi-circle:after { -webkit-mask-image: var(--mi-icon-circle); }
+.mi.mi-circle-half-stroke:after { -webkit-mask-image: var(--mi-icon-circle-half-stroke); }
+.mi.mi-circle-info:after { -webkit-mask-image: var(--mi-icon-circle-info); }
+.mi.mi-circle-pause:after { -webkit-mask-image: var(--mi-icon-circle-pause); }
+.mi.mi-circle-radiation:after { -webkit-mask-image: var(--mi-icon-circle-radiation); }
+.mi.mi-circle-right:after { -webkit-mask-image: var(--mi-icon-circle-right); }
+.mi.mi-clouds:after { -webkit-mask-image: var(--mi-icon-clouds); }
+.mi.mi-code:after { -webkit-mask-image: var(--mi-icon-code); }
+.mi.mi-comment-lines:after { -webkit-mask-image: var(--mi-icon-comment-lines); }
+.mi.mi-cup-togo:after { -webkit-mask-image: var(--mi-icon-cup-togo); }
+.mi.mi-diagram-next:after { -webkit-mask-image: var(--mi-icon-diagram-next); }
+.mi.mi-diagram-subtask:after { -webkit-mask-image: var(--mi-icon-diagram-subtask); }
+.mi.mi-down:after { -webkit-mask-image: var(--mi-icon-down); }
+.mi.mi-dumbbell:after { -webkit-mask-image: var(--mi-icon-dumbbell); }
+.mi.mi-dumpster-fire:after { -webkit-mask-image: var(--mi-icon-dumpster-fire); }
+.mi.mi-empty-set:after { -webkit-mask-image: var(--mi-icon-empty-set); }
+.mi.mi-envelope:after { -webkit-mask-image: var(--mi-icon-envelope); }
+.mi.mi-eyes:after { -webkit-mask-image: var(--mi-icon-eyes); }
+.mi.mi-face-glasses:after { -webkit-mask-image: var(--mi-icon-face-glasses); }
+.mi.mi-face-head-bandage:after { -webkit-mask-image: var(--mi-icon-face-head-bandage); }
+.mi.mi-face-nauseated:after { -webkit-mask-image: var(--mi-icon-face-nauseated); }
+.mi.mi-face-smile-wink:after { -webkit-mask-image: var(--mi-icon-face-smile-wink); }
+.mi.mi-face-thinking:after { -webkit-mask-image: var(--mi-icon-face-thinking); }
+.mi.mi-face-thinking:after { -webkit-mask-image: var(--mi-icon-face-thinking); }
+.mi.mi-fan-table:after { -webkit-mask-image: var(--mi-icon-fan-table); }
+.mi.mi-film:after { -webkit-mask-image: var(--mi-icon-film); }
+.mi.mi-flask-round-potion:after { -webkit-mask-image: var(--mi-icon-flask-round-potion); }
+.mi.mi-flower-tulip:after { -webkit-mask-image: var(--mi-icon-flower-tulip); }
+.mi.mi-folder:after { -webkit-mask-image: var(--mi-icon-folder); }
+.mi.mi-folder-open:after { -webkit-mask-image: var(--mi-icon-folder-open); }
+.mi.mi-gauge:after { -webkit-mask-image: var(--mi-icon-gauge); }
+.mi.mi-glass:after { -webkit-mask-image: var(--mi-icon-glass); }
+.mi.mi-glass-water:after { -webkit-mask-image: var(--mi-icon-glass-water); }
+.mi.mi-hand:after { -webkit-mask-image: var(--mi-icon-hand); }
+.mi.mi-hand-fist:after { -webkit-mask-image: var(--mi-icon-hand-fist); }
+.mi.mi-image:after { -webkit-mask-image: var(--mi-icon-image); }
+.mi.mi-industry-windows:after { -webkit-mask-image: var(--mi-icon-industry-windows); }
+.mi.mi-info:after { -webkit-mask-image: var(--mi-icon-info); }
+.mi.mi-input-numeric:after { -webkit-mask-image: var(--mi-icon-input-numeric); }
+.mi.mi-key:after { -webkit-mask-image: var(--mi-icon-key); }
+.mi.mi-leaf:after { -webkit-mask-image: var(--mi-icon-leaf); }
+.mi.mi-lightbulb:after { -webkit-mask-image: var(--mi-icon-lightbulb); }
+.mi.mi-loveseat:after { -webkit-mask-image: var(--mi-icon-loveseat); }
+.mi.mi-magnifying-glass:after { -webkit-mask-image: var(--mi-icon-magnifying-glass); }
+.mi.mi-map-pin:after { -webkit-mask-image: var(--mi-icon-map-pin); }
+.mi.mi-mask-face:after { -webkit-mask-image: var(--mi-icon-mask-face); }
+.mi.mi-medal:after { -webkit-mask-image: var(--mi-icon-medal); }
+.mi.mi-messages:after { -webkit-mask-image: var(--mi-icon-messages); }
+.mi.mi-mustache:after { -webkit-mask-image: var(--mi-icon-mustache); }
+.mi.mi-microphone:after { -webkit-mask-image: var(--mi-icon-microphone); }
+.mi.mi-mobile:after { -webkit-mask-image: var(--mi-icon-mobile); }
+.mi.mi-people-group:after { -webkit-mask-image: var(--mi-icon-people-group); }
+.mi.mi-person-running-fast:after { -webkit-mask-image: var(--mi-icon-person-running-fast); }
+.mi.mi-person-to-door:after { -webkit-mask-image: var(--mi-icon-person-to-door); }
+.mi.mi-plane:after { -webkit-mask-image: var(--mi-icon-plane); }
+.mi.mi-plug:after { -webkit-mask-image: var(--mi-icon-plug); }
+.mi.mi-poo-storm:after { -webkit-mask-image: var(--mi-icon-poo-storm); }
+.mi.mi-power-off:after { -webkit-mask-image: var(--mi-icon-power-off); }
+.mi.mi-prescription-bottle-pill:after { -webkit-mask-image: var(--mi-icon-prescription-bottle-pill); }
+.mi.mi-radar:after { -webkit-mask-image: var(--mi-icon-radar); }
+.mi.mi-robot:after { -webkit-mask-image: var(--mi-icon-robot); }
+.mi.mi-scanner-gun:after { -webkit-mask-image: var(--mi-icon-scanner-gun); }
+.mi.mi-server:after { -webkit-mask-image: var(--mi-icon-server); }
+.mi.mi-shelves:after { -webkit-mask-image: var(--mi-icon-shelves); }
+.mi.mi-shovel:after { -webkit-mask-image: var(--mi-icon-shovel); }
+.mi.mi-shower:after { -webkit-mask-image: var(--mi-icon-shower); }
+.mi.mi-siren-on:after { -webkit-mask-image: var(--mi-icon-siren-on); }
+.mi.mi-snooze:after { -webkit-mask-image: var(--mi-icon-snooze); }
+.mi.mi-spa:after { -webkit-mask-image: var(--mi-icon-spa); }
+.mi.mi-star-shooting:after { -webkit-mask-image: var(--mi-icon-star-shooting); }
+.mi.mi-stethoscope:after { -webkit-mask-image: var(--mi-icon-stethoscope); }
+.mi.mi-sun-bright:after { -webkit-mask-image: var(--mi-icon-sun-bright); }
+.mi.mi-tablets:after { -webkit-mask-image: var(--mi-icon-tablets); }
+.mi.mi-teddy-bear:after { -webkit-mask-image: var(--mi-icon-teddy-bear); }
+.mi.mi-thumbs-down:after { -webkit-mask-image: var(--mi-icon-thumbs-down); }
+.mi.mi-thumbs-up:after { -webkit-mask-image: var(--mi-icon-thumbs-up); }
+.mi.mi-toilet-paper:after { -webkit-mask-image: var(--mi-icon-toilet-paper); }
+.mi.mi-tower-observation:after { -webkit-mask-image: var(--mi-icon-tower-observation); }
+.mi.mi-turkey:after { -webkit-mask-image: var(--mi-icon-turkey); }
+.mi.mi-up:after { -webkit-mask-image: var(--mi-icon-up); }
+.mi.mi-usb-drive:after { -webkit-mask-image: var(--mi-icon-usb-drive); }
+.mi.mi-user:after { -webkit-mask-image: var(--mi-icon-user); }
+.mi.mi-user-group:after { -webkit-mask-image: var(--mi-icon-user-group); }
+.mi.mi-utensils:after { -webkit-mask-image: var(--mi-icon-utensils); }
+.mi.mi-weight-scale:after { -webkit-mask-image: var(--mi-icon-weight-scale); }
+.mi.mi-window:after { -webkit-mask-image: var(--mi-icon-window); }
+.mi.mi-wrench:after { -webkit-mask-image: var(--mi-icon-wrench); }
+
+
+/* Stand alone html icon configuration */
+.mi {
+}
+.mi::after {
+    mask-size: contain; 
+    mask-repeat: no-repeat; 
+    left: 0;
+    background-color: var(--mi-icon-color);
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    content: "";
+	vertical-align: baseline;
+    -webkit-mask-image: var(--mi-icon-duotone-empty-set); /* Each icon will override this default */
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat; 
+    -webkit-mask-position: center;
+}
+
+
+/* Adapted the Font Awesome code to work this icon scheme. */
+
+.mi-1x {
+  font-size: 1em; }
+
+.mi-2x {
+  font-size: 2em; }
+
+.mi-3x {
+  font-size: 3em; }
+
+.mi-4x {
+  font-size: 4em; }
+
+.mi-5x {
+  font-size: 5em; }
+
+.mi-6x {
+  font-size: 6em; }
+
+.mi-7x {
+  font-size: 7em; }
+
+.mi-8x {
+  font-size: 8em; }
+
+.mi-9x {
+  font-size: 9em; }
+
+.mi-10x {
+  font-size: 10em; }
+
+.mi-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em; }
+
+.mi-xs {
+  font-size: 0.75em;
+  line-height: 0.08333em;
+  vertical-align: 0.125em; }
+
+.mi-sm {
+  font-size: 0.875em;
+  line-height: 0.07143em;
+  vertical-align: 0.05357em; }
+
+.mi-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em; }
+
+.mi-xl {
+  font-size: 1.5em;
+  line-height: 0.04167em;
+  vertical-align: -0.125em; }
+
+.mi-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em; }
+
+.mi-fw {
+  text-align: center;
+  width: 1.25em; }
+
+.mi-ul {
+  list-style-type: none;
+  margin-left: var(--mi-li-margin, 2.5em);
+  padding-left: 0; }
+  .fa-ul > li {
+    position: relative; }
+
+.mi-li {
+  left: calc(var(--mi-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--mi-li-width, 2em);
+  line-height: inherit; }
+
+.mi-border {
+  border-color: var(--mi-border-color, #3580BA);
+  border-radius: var(--mi-border-radius, 8px);
+  border-style: var(--mi-border-style, solid);
+  border-width: var(--mi-border-width, 3px);
+  padding: var(--mi-border-padding, 0.2em 0.25em 0.15em); }
+
+.mi-pull-left {
+  float: left;
+  margin-right: var(--mi-pull-margin, 0.3em); }
+
+.mi-pull-right {
+  float: right;
+  margin-left: var(--mi-pull-margin, 0.3em); }
+
+.mi-beat::after {
+  -webkit-animation-name: mi-beat;
+          animation-name: mi-beat;
+  -webkit-animation-delay: var(--mi-animation-delay, 0s);
+          animation-delay: var(--mi-animation-delay, 0s);
+  -webkit-animation-direction: var(--mi-animation-direction, normal);
+          animation-direction: var(--mi-animation-direction, normal);
+  -webkit-animation-duration: var(--mi-animation-duration, 1s);
+          animation-duration: var(--mi-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+          animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--mi-animation-timing, ease-in-out);
+          animation-timing-function: var(--mi-animation-timing, ease-in-out); }
+
+.mi-bounce::after {
+  -webkit-animation-name: mi-bounce;
+          animation-name: mi-bounce;
+  -webkit-animation-delay: var(--mi-animation-delay, 0s);
+          animation-delay: var(--mi-animation-delay, 0s);
+  -webkit-animation-direction: var(--mi-animation-direction, normal);
+          animation-direction: var(--mi-animation-direction, normal);
+  -webkit-animation-duration: var(--mi-animation-duration, 1s);
+          animation-duration: var(--mi-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+          animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--mi-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--mi-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1)); }
+
+.mi-fade::after {
+  -webkit-animation-name: mi-fade;
+          animation-name: mi-fade;
+  -webkit-animation-delay: var(--mi-animation-delay, 0s);
+          animation-delay: var(--mi-animation-delay, 0s);
+  -webkit-animation-direction: var(--mi-animation-direction, normal);
+          animation-direction: var(--mi-animation-direction, normal);
+  -webkit-animation-duration: var(--mi-animation-duration, 1s);
+          animation-duration: var(--mi-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+          animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--mi-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--mi-animation-timing, cubic-bezier(0.4, 0, 0.6, 1)); }
+
+.mi-beat-fade::after {
+  -webkit-animation-name: mi-beat-fade;
+          animation-name: mi-beat-fade;
+  -webkit-animation-delay: var(--mi-animation-delay, 0s);
+          animation-delay: var(--mi-animation-delay, 0s);
+  -webkit-animation-direction: var(--mi-animation-direction, normal);
+          animation-direction: var(--mi-animation-direction, normal);
+  -webkit-animation-duration: var(--mi-animation-duration, 1s);
+          animation-duration: var(--mi-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+          animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--mi-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--mi-animation-timing, cubic-bezier(0.4, 0, 0.6, 1)); }
+
+.mi-flip::after {
+  -webkit-animation-name: mi-flip;
+          animation-name: mi-flip;
+  -webkit-animation-delay: var(--mi-animation-delay, 0s);
+          animation-delay: var(--mi-animation-delay, 0s);
+  -webkit-animation-direction: var(--mi-animation-direction, normal);
+          animation-direction: var(--mi-animation-direction, normal);
+  -webkit-animation-duration: var(--mi-animation-duration, 1s);
+          animation-duration: var(--mi-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+          animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--mi-animation-timing, ease-in-out);
+          animation-timing-function: var(--mi-animation-timing, ease-in-out); }
+
+.mi-shake::after {
+  -webkit-animation-name: mi-shake;
+          animation-name: mi-shake;
+  -webkit-animation-delay: var(--mi-animation-delay, 0s);
+          animation-delay: var(--mi-animation-delay, 0s);
+  -webkit-animation-direction: var(--mi-animation-direction, normal);
+          animation-direction: var(--mi-animation-direction, normal);
+  -webkit-animation-duration: var(--mi-animation-duration, 1s);
+          animation-duration: var(--mi-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+          animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--mi-animation-timing, linear);
+          animation-timing-function: var(--mi-animation-timing, linear); }
+
+.mi-spin::after {
+  -webkit-animation-name: mi-spin;
+          animation-name: mi-spin;
+  -webkit-animation-delay: var(--mi-animation-delay, 0s);
+          animation-delay: var(--mi-animation-delay, 0s);
+  -webkit-animation-direction: var(--mi-animation-direction, normal);
+          animation-direction: var(--mi-animation-direction, normal);
+  -webkit-animation-duration: var(--mi-animation-duration, 2s);
+          animation-duration: var(--mi-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+          animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--mi-animation-timing, linear);
+          animation-timing-function: var(--mi-animation-timing, linear); }
+
+/*not working*/
+.mi-spin-reverse::after {
+  --mi-animation-direction: reverse }
+
+.mi-pulse::after,
+.mi-spin-pulse::after {
+  -webkit-animation-name: mi-spin;
+          animation-name: mi-spin;
+  -webkit-animation-direction: var(--mi-animation-direction, normal);
+          animation-direction: var(--mi-animation-direction, normal);
+  -webkit-animation-duration: var(--mi-animation-duration, 1s);
+          animation-duration: var(--mi-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+          animation-iteration-count: var(--mi-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--mi-animation-timing, steps(8));
+          animation-timing-function: var(--mi-animation-timing, steps(8)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .mi-beat::after,
+  .mi-bounce::after,
+  .mi-fade::after,
+  .mi-beat-fade::after,
+  .mi-flip::after,
+  .mi-pulse::after,
+  .mi-shake::after,
+  .mi-spin::after,
+  .mi-spin-pulse::after {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s; } }
+
+@-webkit-keyframes mi-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  45% {
+    -webkit-transform: scale(var(--mi-beat-scale, 1.25));
+            transform: scale(var(--mi-beat-scale, 1.25)); } }
+
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  45% {
+    -webkit-transform: scale(var(--mi-beat-scale, 1.25));
+            transform: scale(var(--mi-beat-scale, 1.25)); } }
+
+@-webkit-keyframes mi-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0); }
+  10% {
+    -webkit-transform: scale(var(--mi-bounce-start-scale-x, 1.1), var(--mi-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--mi-bounce-start-scale-x, 1.1), var(--mi-bounce-start-scale-y, 0.9)) translateY(0); }
+  30% {
+    -webkit-transform: scale(var(--mi-bounce-jump-scale-x, 0.9), var(--mi-bounce-jump-scale-y, 1.1)) translateY(var(--mi-bounce-height, -0.5em));
+            transform: scale(var(--mi-bounce-jump-scale-x, 0.9), var(--mi-bounce-jump-scale-y, 1.1)) translateY(var(--mi-bounce-height, -0.5em)); }
+  50% {
+    -webkit-transform: scale(var(--mi-bounce-land-scale-x, 1.05), var(--mi-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--mi-bounce-land-scale-x, 1.05), var(--mi-bounce-land-scale-y, 0.95)) translateY(0); }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--mi-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--mi-bounce-rebound, -0.125em)); }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0); }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0); } }
+
+@keyframes mi-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0); }
+  10% {
+    -webkit-transform: scale(var(--mi-bounce-start-scale-x, 1.1), var(--mi-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--mi-bounce-start-scale-x, 1.1), var(--mi-bounce-start-scale-y, 0.9)) translateY(0); }
+  30% {
+    -webkit-transform: scale(var(--mi-bounce-jump-scale-x, 0.9), var(--mi-bounce-jump-scale-y, 1.1)) translateY(var(--mi-bounce-height, -0.5em));
+            transform: scale(var(--mi-bounce-jump-scale-x, 0.9), var(--mi-bounce-jump-scale-y, 1.1)) translateY(var(--mi-bounce-height, -0.5em)); }
+  50% {
+    -webkit-transform: scale(var(--mi-bounce-land-scale-x, 1.05), var(--mi-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--mi-bounce-land-scale-x, 1.05), var(--mi-bounce-land-scale-y, 0.95)) translateY(0); }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--mi-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--mi-bounce-rebound, -0.125em)); }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0); }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0); } }
+
+@-webkit-keyframes mi-fade {
+  50% {
+    opacity: var(--mi-fade-opacity, 0.4); } }
+
+@keyframes mi-fade {
+  50% {
+    opacity: var(--mi-fade-opacity, 0.4); } }
+
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--mi-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--mi-beat-fade-scale, 1.125));
+            transform: scale(var(--mi-beat-fade-scale, 1.125)); } }
+
+@keyframes mi-beat-fade {
+  0%, 100% {
+    opacity: var(--mi-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--mi-beat-fade-scale, 1.125));
+            transform: scale(var(--mi-beat-fade-scale, 1.125)); } }
+
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--mi-flip-x, 0), var(--mi-flip-y, 1), var(--mi-flip-z, 0), var(--mi-flip-angle, -180deg));
+            transform: rotate3d(var(--mi-flip-x, 0), var(--mi-flip-y, 1), var(--mi-flip-z, 0), var(--mi-flip-angle, -180deg)); } }
+
+@keyframes mi-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--mi-flip-x, 0), var(--mi-flip-y, 1), var(--mi-flip-z, 0), var(--mi-flip-angle, -180deg));
+            transform: rotate3d(var(--mi-flip-x, 0), var(--mi-flip-y, 1), var(--mi-flip-z, 0), var(--mi-flip-angle, -180deg)); } }
+
+@-webkit-keyframes mi-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg); }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg); }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg); }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg); }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg); }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg); }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg); }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes mi-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg); }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg); }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg); }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg); }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg); }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg); }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg); }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@-webkit-keyframes mi-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes mi-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.mi-rotate-90::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.mi-rotate-180::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.mi-rotate-270::after {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg); }
+
+.mi-flip-horizontal::after {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1); }
+
+.mi-flip-vertical::after {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1); }
+
+.mi-flip-both::after,
+.mi-flip-horizontal.mi-flip-vertical::after {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1); }
+
+.mi-rotate-by::after {
+  -webkit-transform: rotate(var(--mi-rotate-angle, none));
+          transform: rotate(var(--mi-rotate-angle, none)); }
+
+
+/* Checklist Icons */
+
+/* Minimal Compatibility Section*/
+input[data-task="\""]:checked, input[data-task="“"]:checked, li[data-task="\""]>input:checked, li[data-task="\""]>p>input:checked, li[data-task="“"]>input:checked, li[data-task="“"]>p>input:checked {
+  background-image: none;
+  border: none;
+}
+
+input[data-task="/"]:checked:after, li[data-task="/"]>input:checked:after, li[data-task="/"]>p>input:checked:after {
+  width: 100%;
+}
+
+input[data-task="/"]:checked, li[data-task="/"]>input:checked, li[data-task="/"]>p>input:checked,
+input[data-task="i"]:checked, li[data-task="i"]>input:checked, li[data-task="i"]>p>input:checked,
+input[data-task="?"]:checked, li[data-task="?"]>input:checked, li[data-task="?"]>p>input:checked 
+{
+    background-image: none;
+    border: none;
+}
+
+input[data-task="-"]:checked, li[data-task="-"]>input:checked, li[data-task="-"]>p>input:checked,
+input[data-task="!"]:checked, li[data-task="!"]>input:checked, li[data-task="!"]>p>input:checked,
+input[data-task="*"]:checked, li[data-task="*"]>input:checked, li[data-task="*"]>p>input:checked,
+input[data-task="b"]:checked, li[data-task="b"]>input:checked, li[data-task="b"]>p>input:checked,
+input[data-task="c"]:checked, li[data-task="c"]>input:checked, li[data-task="c"]>p>input:checked,
+input[data-task="d"]:checked, li[data-task="d"]>input:checked, li[data-task="d"]>p>input:checked,
+input[data-task="f"]:checked, li[data-task="f"]>input:checked, li[data-task="f"]>p>input:checked,
+input[data-task="I"]:checked, li[data-task="I"]>input:checked, li[data-task="I"]>p>input:checked,
+input[data-task="k"]:checked, li[data-task="k"]>input:checked, li[data-task="k"]>p>input:checked,
+input[data-task="l"]:checked, li[data-task="l"]>input:checked, li[data-task="l"]>p>input:checked,
+input[data-task="p"]:checked, li[data-task="p"]>input:checked, li[data-task="p"]>p>input:checked,
+input[data-task="r"]:checked, li[data-task="r"]>input:checked, li[data-task="r"]>p>input:checked,
+input[data-task="S"]:checked, li[data-task="S"]>input:checked, li[data-task="S"]>p>input:checked,
+input[data-task="u"]:checked, li[data-task="u"]>input:checked, li[data-task="u"]>p>input:checked,
+input[data-task="w"]:checked, li[data-task="w"]>input:checked, li[data-task="w"]>p>input:checked,
+input[data-task="<"]:checked, li[data-task="<"]>input:checked, li[data-task="<"]>p>input:checked,
+input[data-task=">"]:checked, li[data-task=">"]>input:checked, li[data-task=">"]>p>input:checked
+{ 
+    -webkit-mask-image: none;
+    transform: rotate(0deg); /* Corrects the forward icon */
+    border: none;
+}
+
+
+/* End of Minimal Campatibility Section */ 
+
+
+/* Standard Icon Checklists */
+input[type=checkbox]:checked { background-color: transparent; }
+input[data-task="x"]:checked,  li[data-task="x"]>input:checked,  li[data-task="x"]>p>input:checked,
+input[data-task="/"]:checked,  li[data-task="/"]>input:checked,  li[data-task="/"]>p>input:checked,
+input[data-task="-"]:checked,  li[data-task="-"]>input:checked,  li[data-task="-"]>p>input:checked,
+input[data-task=">"]:checked,  li[data-task=">"]>input:checked,  li[data-task=">"]>p>input:checked,
+input[data-task="<"]:checked,  li[data-task="<"]>input:checked,  li[data-task="<"]>p>input:checked,
+input[data-task="?"]:checked,  li[data-task="?"]>input:checked,  li[data-task="?"]>p>input:checked,
+input[data-task="!"]:checked,  li[data-task="!"]>input:checked,  li[data-task="!"]>p>input:checked,
+input[data-task="*"]:checked,  li[data-task="*"]>input:checked,  li[data-task="*"]>p>input:checked,
+input[data-task="."]:checked,  li[data-task="."]>input:checked,  li[data-task="."]>p>input:checked,
+input[data-task="@"]:checked,  li[data-task="@"]>input:checked,  li[data-task="@"]>p>input:checked,
+input[data-task="#"]:checked,  li[data-task="#"]>input:checked,  li[data-task="#"]>p>input:checked,
+input[data-task="%"]:checked,  li[data-task="%"]>input:checked,  li[data-task="%"]>p>input:checked,
+input[data-task="&"]:checked,  li[data-task="&"]>input:checked,  li[data-task="&"]>p>input:checked,
+input[data-task="="]:checked,  li[data-task="="]>input:checked,  li[data-task="="]>p>input:checked,
+input[data-task="+"]:checked,  li[data-task="+"]>input:checked,  li[data-task="+"]>p>input:checked,
+input[data-task=":"]:checked,  li[data-task=":"]>input:checked,  li[data-task=":"]>p>input:checked,
+input[data-task="~"]:checked,  li[data-task="~"]>input:checked,  li[data-task="~"]>p>input:checked,
+input[data-task="0"]:checked,  li[data-task="0"]>input:checked,  li[data-task="0"]>p>input:checked,
+input[data-task="1"]:checked,  li[data-task="1"]>input:checked,  li[data-task="1"]>p>input:checked,
+input[data-task="2"]:checked,  li[data-task="2"]>input:checked,  li[data-task="2"]>p>input:checked,
+input[data-task="3"]:checked,  li[data-task="3"]>input:checked,  li[data-task="3"]>p>input:checked,
+input[data-task="4"]:checked,  li[data-task="4"]>input:checked,  li[data-task="4"]>p>input:checked,
+input[data-task="5"]:checked,  li[data-task="5"]>input:checked,  li[data-task="5"]>p>input:checked,
+input[data-task="6"]:checked,  li[data-task="6"]>input:checked,  li[data-task="6"]>p>input:checked,
+input[data-task="7"]:checked,  li[data-task="7"]>input:checked,  li[data-task="7"]>p>input:checked,
+input[data-task="8"]:checked,  li[data-task="8"]>input:checked,  li[data-task="8"]>p>input:checked,
+input[data-task="9"]:checked,  li[data-task="9"]>input:checked,  li[data-task="9"]>p>input:checked,
+input[data-task="\""]:checked,  li[data-task="\""]>input:checked,  li[data-task="\""]>p>input:checked,
+input[data-task="a"]:checked,  li[data-task="a"]>input:checked,  li[data-task="a"]>p>input:checked,
+input[data-task="A"]:checked,  li[data-task="A"]>input:checked,  li[data-task="A"]>p>input:checked,
+input[data-task="b"]:checked,  li[data-task="b"]>input:checked,  li[data-task="b"]>p>input:checked,
+input[data-task="B"]:checked,  li[data-task="B"]>input:checked,  li[data-task="B"]>p>input:checked,
+input[data-task="c"]:checked,  li[data-task="c"]>input:checked,  li[data-task="c"]>p>input:checked,
+input[data-task="C"]:checked,  li[data-task="C"]>input:checked,  li[data-task="C"]>p>input:checked,
+input[data-task="d"]:checked,  li[data-task="d"]>input:checked,  li[data-task="d"]>p>input:checked,
+input[data-task="D"]:checked,  li[data-task="D"]>input:checked,  li[data-task="D"]>p>input:checked,
+input[data-task="e"]:checked,  li[data-task="e"]>input:checked,  li[data-task="e"]>p>input:checked,
+input[data-task="E"]:checked,  li[data-task="E"]>input:checked,  li[data-task="E"]>p>input:checked,
+input[data-task="f"]:checked,  li[data-task="f"]>input:checked,  li[data-task="f"]>p>input:checked,
+input[data-task="F"]:checked,  li[data-task="F"]>input:checked,  li[data-task="F"]>p>input:checked,
+input[data-task="g"]:checked,  li[data-task="g"]>input:checked,  li[data-task="g"]>p>input:checked,
+input[data-task="G"]:checked,  li[data-task="G"]>input:checked,  li[data-task="G"]>p>input:checked,
+input[data-task="h"]:checked,  li[data-task="h"]>input:checked,  li[data-task="h"]>p>input:checked,
+input[data-task="H"]:checked,  li[data-task="H"]>input:checked,  li[data-task="H"]>p>input:checked,
+input[data-task="i"]:checked,  li[data-task="i"]>input:checked,  li[data-task="i"]>p>input:checked,
+input[data-task="I"]:checked,  li[data-task="I"]>input:checked,  li[data-task="I"]>p>input:checked,
+input[data-task="j"]:checked,  li[data-task="j"]>input:checked,  li[data-task="j"]>p>input:checked,
+input[data-task="J"]:checked,  li[data-task="J"]>input:checked,  li[data-task="J"]>p>input:checked,
+input[data-task="k"]:checked,  li[data-task="k"]>input:checked,  li[data-task="k"]>p>input:checked,
+input[data-task="K"]:checked,  li[data-task="K"]>input:checked,  li[data-task="K"]>p>input:checked,
+input[data-task="l"]:checked,  li[data-task="l"]>input:checked,  li[data-task="l"]>p>input:checked,
+input[data-task="L"]:checked,  li[data-task="L"]>input:checked,  li[data-task="L"]>p>input:checked,
+input[data-task="m"]:checked,  li[data-task="m"]>input:checked,  li[data-task="E"]>p>input:checked,
+input[data-task="M"]:checked,  li[data-task="M"]>input:checked,  li[data-task="M"]>p>input:checked,
+input[data-task="n"]:checked,  li[data-task="n"]>input:checked,  li[data-task="n"]>p>input:checked,
+input[data-task="N"]:checked,  li[data-task="N"]>input:checked,  li[data-task="N"]>p>input:checked,
+input[data-task="o"]:checked,  li[data-task="o"]>input:checked,  li[data-task="o"]>p>input:checked,
+input[data-task="O"]:checked,  li[data-task="O"]>input:checked,  li[data-task="O"]>p>input:checked,
+input[data-task="p"]:checked,  li[data-task="p"]>input:checked,  li[data-task="p"]>p>input:checked,
+input[data-task="P"]:checked,  li[data-task="P"]>input:checked,  li[data-task="P"]>p>input:checked,
+input[data-task="q"]:checked,  li[data-task="E"]>input:checked,  li[data-task="E"]>p>input:checked,
+input[data-task="Q"]:checked,  li[data-task="Q"]>input:checked,  li[data-task="Q"]>p>input:checked,
+input[data-task="r"]:checked,  li[data-task="r"]>input:checked,  li[data-task="r"]>p>input:checked,
+input[data-task="R"]:checked,  li[data-task="R"]>input:checked,  li[data-task="R"]>p>input:checked,
+input[data-task="s"]:checked,  li[data-task="s"]>input:checked,  li[data-task="s"]>p>input:checked,
+input[data-task="S"]:checked,  li[data-task="S"]>input:checked,  li[data-task="S"]>p>input:checked,
+input[data-task="t"]:checked,  li[data-task="t"]>input:checked,  li[data-task="t"]>p>input:checked,
+input[data-task="T"]:checked,  li[data-task="T"]>input:checked,  li[data-task="T"]>p>input:checked,
+input[data-task="u"]:checked,  li[data-task="u"]>input:checked,  li[data-task="u"]>p>input:checked,
+input[data-task="U"]:checked,  li[data-task="U"]>input:checked,  li[data-task="U"]>p>input:checked,
+input[data-task="v"]:checked,  li[data-task="v"]>input:checked,  li[data-task="v"]>p>input:checked,
+input[data-task="V"]:checked,  li[data-task="V"]>input:checked,  li[data-task="V"]>p>input:checked,
+input[data-task="w"]:checked,  li[data-task="w"]>input:checked,  li[data-task="w"]>p>input:checked,
+input[data-task="W"]:checked,  li[data-task="W"]>input:checked,  li[data-task="W"]>p>input:checked,
+input[data-task="X"]:checked,  li[data-task="X"]>input:checked,  li[data-task="X"]>p>input:checked,
+input[data-task="y"]:checked,  li[data-task="y"]>input:checked,  li[data-task="y"]>p>input:checked,
+input[data-task="Y"]:checked,  li[data-task="Y"]>input:checked,  li[data-task="Y"]>p>input:checked,
+input[data-task="z"]:checked,  li[data-task="z"]>input:checked,  li[data-task="z"]>p>input:checked,
+input[data-task="Z"]:checked,  li[data-task="Z"]>input:checked,  li[data-task="Z"]>p>input:checked,
+input[data-task="⏻"]:checked,  li[data-task="⏻"]>input:checked,  li[data-task="⏻"]>p>input:checked,
+input[data-task="⏼"]:checked,  li[data-task="⏼"]>input:checked,  li[data-task="⏼"]>p>input:checked,
+input[data-task="▦"]:checked,  li[data-task="▦"]>input:checked,  li[data-task="▦"]>p>input:checked,
+input[data-task="→"]:checked,  li[data-task="→"]>input:checked,  li[data-task="→"]>p>input:checked
+{
+    --checkbox-color: transparent;
+    background-color: transparent;
+    border:none;
+}
+
+/* Standard Icon Checklists :: After */
+input[data-task="x"]:checked::after,  li[data-task="x"]>input:checked::after,  li[data-task="x"]>p>input:checked::after,
+input[data-task="/"]:checked::after,  li[data-task="/"]>input:checked::after,  li[data-task="/"]>p>input:checked::after,
+input[data-task="-"]:checked::after,  li[data-task="-"]>input:checked::after,  li[data-task="-"]>p>input:checked::after,
+input[data-task=">"]:checked::after,  li[data-task=">"]>input:checked::after,  li[data-task=">"]>p>input:checked::after,
+input[data-task="<"]:checked::after,  li[data-task="<"]>input:checked::after,  li[data-task="<"]>p>input:checked::after,
+input[data-task="?"]:checked::after,  li[data-task="?"]>input:checked::after,  li[data-task="?"]>p>input:checked::after,
+input[data-task="!"]:checked::after,  li[data-task="!"]>input:checked::after,  li[data-task="!"]>p>input:checked::after,
+input[data-task="*"]:checked::after,  li[data-task="*"]>input:checked::after,  li[data-task="*"]>p>input:checked::after,
+input[data-task="."]:checked::after,  li[data-task="."]>input:checked::after,  li[data-task="."]>p>input:checked::after,
+input[data-task="@"]:checked::after,  li[data-task="@"]>input:checked::after,  li[data-task="@"]>p>input:checked::after,
+input[data-task="#"]:checked::after,  li[data-task="#"]>input:checked::after,  li[data-task="#"]>p>input:checked::after,
+input[data-task="%"]:checked::after,  li[data-task="%"]>input:checked::after,  li[data-task="%"]>p>input:checked::after,
+input[data-task="&"]:checked::after,  li[data-task="&"]>input:checked::after,  li[data-task="&"]>p>input:checked::after,
+input[data-task="="]:checked::after,  li[data-task="="]>input:checked::after,  li[data-task="="]>p>input:checked::after,
+input[data-task="+"]:checked::after,  li[data-task="+"]>input:checked::after,  li[data-task="+"]>p>input:checked::after,
+input[data-task=":"]:checked::after,  li[data-task=":"]>input:checked::after,  li[data-task=":"]>p>input:checked::after,
+input[data-task="~"]:checked::after,  li[data-task="~"]>input:checked::after,  li[data-task="~"]>p>input:checked::after,
+input[data-task="0"]:checked::after,  li[data-task="0"]>input:checked::after,  li[data-task="0"]>p>input:checked::after,
+input[data-task="1"]:checked::after,  li[data-task="1"]>input:checked::after,  li[data-task="1"]>p>input:checked::after,
+input[data-task="2"]:checked::after,  li[data-task="2"]>input:checked::after,  li[data-task="2"]>p>input:checked::after,
+input[data-task="3"]:checked::after,  li[data-task="3"]>input:checked::after,  li[data-task="3"]>p>input:checked::after,
+input[data-task="4"]:checked::after,  li[data-task="4"]>input:checked::after,  li[data-task="4"]>p>input:checked::after,
+input[data-task="5"]:checked::after,  li[data-task="5"]>input:checked::after,  li[data-task="5"]>p>input:checked::after,
+input[data-task="6"]:checked::after,  li[data-task="6"]>input:checked::after,  li[data-task="6"]>p>input:checked::after,
+input[data-task="7"]:checked::after,  li[data-task="7"]>input:checked::after,  li[data-task="7"]>p>input:checked::after,
+input[data-task="8"]:checked::after,  li[data-task="8"]>input:checked::after,  li[data-task="8"]>p>input:checked::after,
+input[data-task="9"]:checked::after,  li[data-task="9"]>input:checked::after,  li[data-task="9"]>p>input:checked::after,
+input[data-task="\""]:checked::after,  li[data-task="\""]>input:checked::after,  li[data-task="\""]>p>input:checked::after,
+input[data-task="a"]:checked::after,  li[data-task="a"]>input:checked::after,  li[data-task="a"]>p>input:checked::after,
+input[data-task="A"]:checked::after,  li[data-task="A"]>input:checked::after,  li[data-task="A"]>p>input:checked::after,
+input[data-task="b"]:checked::after,  li[data-task="b"]>input:checked::after,  li[data-task="b"]>p>input:checked::after,
+input[data-task="B"]:checked::after,  li[data-task="B"]>input:checked::after,  li[data-task="B"]>p>input:checked::after,
+input[data-task="c"]:checked::after,  li[data-task="c"]>input:checked::after,  li[data-task="c"]>p>input:checked::after,
+input[data-task="C"]:checked::after,  li[data-task="C"]>input:checked::after,  li[data-task="C"]>p>input:checked::after,
+input[data-task="d"]:checked::after,  li[data-task="d"]>input:checked::after,  li[data-task="d"]>p>input:checked::after,
+input[data-task="D"]:checked::after,  li[data-task="D"]>input:checked::after,  li[data-task="D"]>p>input:checked::after,
+input[data-task="e"]:checked::after,  li[data-task="e"]>input:checked::after,  li[data-task="e"]>p>input:checked::after,
+input[data-task="E"]:checked::after,  li[data-task="E"]>input:checked::after,  li[data-task="E"]>p>input:checked::after,
+input[data-task="f"]:checked::after,  li[data-task="f"]>input:checked::after,  li[data-task="f"]>p>input:checked::after,
+input[data-task="F"]:checked::after,  li[data-task="F"]>input:checked::after,  li[data-task="F"]>p>input:checked::after,
+input[data-task="g"]:checked::after,  li[data-task="g"]>input:checked::after,  li[data-task="g"]>p>input:checked::after,
+input[data-task="G"]:checked::after,  li[data-task="G"]>input:checked::after,  li[data-task="G"]>p>input:checked::after,
+input[data-task="h"]:checked::after,  li[data-task="h"]>input:checked::after,  li[data-task="h"]>p>input:checked::after,
+input[data-task="H"]:checked::after,  li[data-task="H"]>input:checked::after,  li[data-task="H"]>p>input:checked::after,
+input[data-task="i"]:checked::after,  li[data-task="i"]>input:checked::after,  li[data-task="i"]>p>input:checked::after,
+input[data-task="I"]:checked::after,  li[data-task="I"]>input:checked::after,  li[data-task="I"]>p>input:checked::after,
+input[data-task="j"]:checked::after,  li[data-task="j"]>input:checked::after,  li[data-task="j"]>p>input:checked::after,
+input[data-task="J"]:checked::after,  li[data-task="J"]>input:checked::after,  li[data-task="J"]>p>input:checked::after,
+input[data-task="k"]:checked::after,  li[data-task="k"]>input:checked::after,  li[data-task="k"]>p>input:checked::after,
+input[data-task="K"]:checked::after,  li[data-task="K"]>input:checked::after,  li[data-task="K"]>p>input:checked::after,
+input[data-task="l"]:checked::after,  li[data-task="l"]>input:checked::after,  li[data-task="l"]>p>input:checked::after,
+input[data-task="L"]:checked::after,  li[data-task="L"]>input:checked::after,  li[data-task="L"]>p>input:checked::after,
+input[data-task="m"]:checked::after,  li[data-task="m"]>input:checked::after,  li[data-task="m"]>p>input:checked::after,
+input[data-task="M"]:checked::after,  li[data-task="M"]>input:checked::after,  li[data-task="M"]>p>input:checked::after,
+input[data-task="n"]:checked::after,  li[data-task="n"]>input:checked::after,  li[data-task="n"]>p>input:checked::after,
+input[data-task="N"]:checked::after,  li[data-task="N"]>input:checked::after,  li[data-task="N"]>p>input:checked::after,
+input[data-task="o"]:checked::after,  li[data-task="o"]>input:checked::after,  li[data-task="o"]>p>input:checked::after,
+input[data-task="O"]:checked::after,  li[data-task="O"]>input:checked::after,  li[data-task="O"]>p>input:checked::after,
+input[data-task="p"]:checked::after,  li[data-task="p"]>input:checked::after,  li[data-task="p"]>p>input:checked::after,
+input[data-task="P"]:checked::after,  li[data-task="P"]>input:checked::after,  li[data-task="P"]>p>input:checked::after,
+input[data-task="q"]:checked::after,  li[data-task="q"]>input:checked::after,  li[data-task="q"]>p>input:checked::after,
+input[data-task="Q"]:checked::after,  li[data-task="Q"]>input:checked::after,  li[data-task="Q"]>p>input:checked::after,
+input[data-task="r"]:checked::after,  li[data-task="r"]>input:checked::after,  li[data-task="r"]>p>input:checked::after,
+input[data-task="R"]:checked::after,  li[data-task="R"]>input:checked::after,  li[data-task="R"]>p>input:checked::after,
+input[data-task="s"]:checked::after,  li[data-task="s"]>input:checked::after,  li[data-task="s"]>p>input:checked::after,
+input[data-task="S"]:checked::after,  li[data-task="S"]>input:checked::after,  li[data-task="S"]>p>input:checked::after,
+input[data-task="t"]:checked::after,  li[data-task="t"]>input:checked::after,  li[data-task="t"]>p>input:checked::after,
+input[data-task="T"]:checked::after,  li[data-task="T"]>input:checked::after,  li[data-task="T"]>p>input:checked::after,
+input[data-task="u"]:checked::after,  li[data-task="u"]>input:checked::after,  li[data-task="u"]>p>input:checked::after,
+input[data-task="U"]:checked::after,  li[data-task="U"]>input:checked::after,  li[data-task="U"]>p>input:checked::after,
+input[data-task="v"]:checked::after,  li[data-task="v"]>input:checked::after,  li[data-task="v"]>p>input:checked::after,
+input[data-task="V"]:checked::after,  li[data-task="V"]>input:checked::after,  li[data-task="V"]>p>input:checked::after,
+input[data-task="w"]:checked::after,  li[data-task="w"]>input:checked::after,  li[data-task="w"]>p>input:checked::after,
+input[data-task="W"]:checked::after,  li[data-task="W"]>input:checked::after,  li[data-task="W"]>p>input:checked::after,
+input[data-task="X"]:checked::after,  li[data-task="X"]>input:checked::after,  li[data-task="X"]>p>input:checked::after,
+input[data-task="y"]:checked::after,  li[data-task="y"]>input:checked::after,  li[data-task="y"]>p>input:checked::after,
+input[data-task="Y"]:checked::after,  li[data-task="Y"]>input:checked::after,  li[data-task="Y"]>p>input:checked::after,
+input[data-task="z"]:checked::after,  li[data-task="z"]>input:checked::after,  li[data-task="z"]>p>input:checked::after,
+input[data-task="Z"]:checked::after,  li[data-task="Z"]>input:checked::after,  li[data-task="Z"]>p>input:checked::after,
+input[data-task="⏻"]:checked::after,  li[data-task="⏻"]>input:checked::after,  li[data-task="⏻"]>p>input:checked::after,
+input[data-task="⏼"]:checked::after,  li[data-task="⏼"]>input:checked::after,  li[data-task="⏼"]>p>input:checked::after,
+input[data-task="▦"]:checked::after,  li[data-task="▦"]>input:checked::after,  li[data-task="▦"]>p>input:checked::after,
+input[data-task="→"]:checked::after,  li[data-task="→"]>input:checked::after,  li[data-task="→"]>p>input:checked::after
+{
+    background-color: var(--cl-icon-color);
+    /*left: 0;*/
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+}
+
+@media (hover: hover) {
+    input[type=checkbox]:checked:hover {
+    background-color: transparent;
+  }
+}
+
+[data-task=" "].task-list-item-checkbox, [data-task=""] > .task-list-item-checkbox {
+    border: none;
+    border-radius: 0;
+    background-color: var(--cl-icon-color);
+    -webkit-mask-image: var(--cl-icon-space); 
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat; 
+}
+
+.mi.mi-space::after
+{
+    -webkit-mask-image: var(--cl-icon-space); 
+}
+.mi.mi-x::after, input[data-task="x"]:checked::after, li[data-task="x"]>input:checked::after, li[data-task="x"]>p>input:checked::after
+{ 
+    -webkit-mask-image: var(--cl-icon-x); 
+}
+.mi.mi-slash::after, input[data-task="/"]:checked::after, li[data-task="/"]>input:checked::after, li[data-task="/"]>p>input:checked::after
+{ 
+    -webkit-mask-image: var(--cl-icon-slash);
+}
+.mi.mi-dash::after, input[data-task="-"]:checked::after, li[data-task="-"]>input:checked::after, li[data-task="-"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-dash);
+}
+.mi.mi-greaterthan::after, input[data-task=">"]:checked::after, li[data-task=">"]>input:checked::after, li[data-task=">"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-greaterthan);
+}
+.mi.mi-lessthan::after, input[data-task="<"]:checked::after, li[data-task="<"]>input:checked::after, li[data-task="<"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--mi-icon-lessthan);
+}
+.mi.mi-question::after, input[data-task="?"]:checked::after, li[data-task="?"]>input:checked::after, li[data-task="?"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-question);
+}
+.mi.mi-exclamation::after, input[data-task="!"]:checked::after, li[data-task="!"]>input:checked::after, li[data-task="!"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-exclamation);
+}
+.mi.mi-asterisk::after, input[data-task="*"]:checked::after, li[data-task="*"]>input:checked::after, li[data-task="*"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-asterisk);
+}
+.mi.mi-period::after, input[data-task="."]:checked::after, li[data-task="."]>input:checked::after, li[data-task="."]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-period);
+}
+.mi.mi-at::after, input[data-task="@"]:checked::after, li[data-task="@"]>input:checked::after, li[data-task="@"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-at);
+}
+.mi.mi-hashtag::after, input[data-task="#"]:checked::after, li[data-task="#"]>input:checked::after, li[data-task="#"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-hashtag);
+}
+.mi.mi-percent::after, input[data-task="%"]:checked::after, li[data-task="%"]>input:checked::after, li[data-task="%"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-percent);
+}
+.mi.mi-ampersand::after, input[data-task="&"]:checked::after, li[data-task="&"]>input:checked::after, li[data-task="&"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-ampersand);
+}
+.mi.mi-equal::after, input[data-task="="]:checked::after, li[data-task="="]>input:checked::after, li[data-task="="]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-equal);
+}
+.mi.mi-plus::after, input[data-task="+"]:checked::after, li[data-task="+"]>input:checked::after, li[data-task="+"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-plus);
+}
+.mi.mi-colon::after, input[data-task=":"]:checked::after, li[data-task=":"]>input:checked::after, li[data-task=":"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-colon);
+}
+.mi.mi-tilde::after, input[data-task="~"]:checked::after, li[data-task="~"]>input:checked::after, li[data-task="~"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-tilde);
+}
+.mi.mi-quote::after, input[data-task="\""]:checked::after, li[data-task="\""]>input:checked::after, li[data-task="\""]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-quote);
+}
+.mi.mi-0::after, input[data-task="0"]:checked::after, li[data-task="0"]>input:checked::after, li[data-task="0"]>p>input:checked::after
+{	
+    -webkit-mask-image: var(--cl-icon-0);
+	background-color: var(--cl0-icon-color, #595f72);
+}
+.mi.mi-1::after, input[data-task="1"]:checked::after, li[data-task="1"]>input:checked::after, li[data-task="1"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-1);
+	background-color: var(--cl1-icon-color, #73bbb2);
+}
+.mi.mi-2::after, input[data-task="2"]:checked::after, li[data-task="2"]>input:checked::after, li[data-task="2"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-2);
+	background-color: var(--cl2-icon-color, #a8c373);
+}
+.mi.mi-3::after, input[data-task="3"]:checked::after, li[data-task="3"]>input:checked::after, li[data-task="3"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-3);
+	background-color: var(--cl3-icon-color, #e5b567);
+}
+.mi.mi-4::after, input[data-task="4"]:checked::after, li[data-task="4"]>input:checked::after, li[data-task="4"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-4);
+	background-color: var(--cl4-icon-color, #d5763f);
+}
+.mi.mi-5::after, input[data-task="5"]:checked::after, li[data-task="5"]>input:checked::after, li[data-task="5"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-5);
+	background-color: var(--cl5-icon-color, #d04255);
+}
+.mi.mi-6::after, input[data-task="6"]:checked::after, li[data-task="6"]>input:checked::after, li[data-task="6"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-6);
+	background-color: var(--cl6-icon-color, #3580BA);
+}
+.mi.mi-7::after, input[data-task="7"]:checked::after, li[data-task="7"]>input:checked::after, li[data-task="7"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-7);
+	background-color: var(--cl7-icon-color, #3580BA);
+}
+.mi.mi-8::after, input[data-task="8"]:checked::after, li[data-task="8"]>input:checked::after, li[data-task="8"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-8);
+	background-color: var(--cl8-icon-color, #3580BA);
+}
+.mi.mi-9::after, input[data-task="9"]:checked::after, li[data-task="9"]>input:checked::after, li[data-task="9"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-9);
+	background-color: var(--cl9-icon-color, #3580BA);
+}
+.mi.mi-a::after, input[data-task="a"]:checked::after, li[data-task="a"]>input:checked::after, li[data-task="a"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-a);
+}
+.mi.mi-A::after, input[data-task="A"]:checked::after, li[data-task="A"]>input:checked::after, li[data-task="A"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-A);
+}
+.mi.mi-b::after, input[data-task="b"]:checked::after, li[data-task="b"]>input:checked::after, li[data-task="b"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-b);
+}
+.mi.mi-B::after, input[data-task="B"]:checked::after, li[data-task="B"]>input:checked::after, li[data-task="B"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-B);
+}
+.mi.mi-c::after, input[data-task="c"]:checked::after, li[data-task="c"]>input:checked::after, li[data-task="c"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-c);
+}
+.mi.mi-C::after, input[data-task="C"]:checked::after, li[data-task="C"]>input:checked::after, li[data-task="C"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-C);
+}
+.mi.mi-d::after, input[data-task="d"]:checked::after, li[data-task="d"]>input:checked::after, li[data-task="d"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-d);
+}
+.mi.mi-D::after, input[data-task="D"]:checked::after, li[data-task="D"]>input:checked::after, li[data-task="D"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-D);
+}
+.mi.mi-e::after, input[data-task="e"]:checked::after, li[data-task="e"]>input:checked::after, li[data-task="e"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-e);
+}
+.mi.mi-E::after, input[data-task="E"]:checked::after, li[data-task="E"]>input:checked::after, li[data-task="E"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-E);
+}
+.mi.mi-f::after, input[data-task="f"]:checked::after, li[data-task="f"]>input:checked::after, li[data-task="f"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-f);
+}
+.mi.mi-F::after, input[data-task="F"]:checked::after, li[data-task="F"]>input:checked::after, li[data-task="F"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-F);
+}
+.mi.mi-g::after, input[data-task="g"]:checked::after, li[data-task="g"]>input:checked::after, li[data-task="g"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-g);
+}
+.mi.mi-G::after, input[data-task="G"]:checked::after, li[data-task="G"]>input:checked::after, li[data-task="G"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-G);
+}
+.mi.mi-h::after, input[data-task="h"]:checked::after, li[data-task="h"]>input:checked::after, li[data-task="h"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-h);
+}
+.mi.mi-H::after, input[data-task="H"]:checked::after, li[data-task="H"]>input:checked::after, li[data-task="H"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-H);
+}
+.mi.mi-i::after, input[data-task="i"]:checked::after, li[data-task="i"]>input:checked::after, li[data-task="i"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-i);
+    background-color: var(--color-green);
+}
+.mi.mi-I::after, input[data-task="I"]:checked::after, li[data-task="I"]>input:checked::after, li[data-task="I"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-I);
+}
+.mi.mi-j::after, input[data-task="j"]:checked::after, li[data-task="j"]>input:checked::after, li[data-task="j"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-j);
+}
+.mi.mi-J::after, input[data-task="J"]:checked::after, li[data-task="J"]>input:checked::after, li[data-task="J"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-J);
+}
+.mi.mi-k::after, input[data-task="k"]:checked::after, li[data-task="k"]>input:checked::after, li[data-task="k"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-k);
+}
+.mi.mi-K::after, input[data-task="K"]:checked::after, li[data-task="K"]>input:checked::after, li[data-task="K"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-K);
+}
+.mi.mi-l::after, input[data-task="l"]:checked::after, li[data-task="l"]>input:checked::after, li[data-task="l"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-l);
+}
+.mi.mi-L::after, input[data-task="L"]:checked::after, li[data-task="L"]>input:checked::after, li[data-task="L"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-L);
+}
+.mi.mi-m::after, input[data-task="m"]:checked::after, li[data-task="m"]>input:checked::after, li[data-task="m"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-m);
+}
+.mi.mi-M::after, input[data-task="M"]:checked::after, li[data-task="M"]>input:checked::after, li[data-task="M"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-M);
+}
+.mi.mi-n::after, input[data-task="n"]:checked::after, li[data-task="n"]>input:checked::after, li[data-task="n"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-n);
+}
+.mi.mi-N::after, input[data-task="N"]:checked::after, li[data-task="N"]>input:checked::after, li[data-task="N"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-N);
+}
+.mi.mi-o::after, input[data-task="o"]:checked::after, li[data-task="o"]>input:checked::after, li[data-task="o"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-o);
+}
+.mi.mi-O::after, input[data-task="O"]:checked::after, li[data-task="O"]>input:checked::after, li[data-task="O"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-O);
+}
+.mi.mi-p::after, input[data-task="p"]:checked::after, li[data-task="p"]>input:checked::after, li[data-task="p"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-p);
+}
+.mi.mi-P::after, input[data-task="P"]:checked::after, li[data-task="P"]>input:checked::after, li[data-task="P"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-P);
+}
+.mi.mi-q::after, input[data-task="q"]:checked::after, li[data-task="q"]>input:checked::after, li[data-task="q"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-q);
+}
+.mi.mi-Q::after, input[data-task="Q"]:checked::after, li[data-task="Q"]>input:checked::after, li[data-task="Q"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-Q);
+}
+.mi.mi-r::after, input[data-task="r"]:checked::after, li[data-task="r"]>input:checked::after, li[data-task="r"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-r);
+}
+.mi.mi-R::after, input[data-task="R"]:checked::after, li[data-task="R"]>input:checked::after, li[data-task="R"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-R);
+}
+.mi.mi-s::after, input[data-task="s"]:checked::after, li[data-task="s"]>input:checked::after, li[data-task="s"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-s);
+}
+.mi.mi-S::after, input[data-task="S"]:checked::after, li[data-task="S"]>input:checked::after, li[data-task="S"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-S);
+}
+.mi.mi-t::after, input[data-task="t"]:checked::after, li[data-task="t"]>input:checked::after, li[data-task="t"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-t);
+}
+.mi.mi-T::after, input[data-task="T"]:checked::after, li[data-task="T"]>input:checked::after, li[data-task="T"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-T);
+}
+.mi.mi-u::after, input[data-task="u"]:checked::after, li[data-task="u"]>input:checked::after, li[data-task="u"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-u);
+}
+.mi.mi-U::after, input[data-task="U"]:checked::after, li[data-task="U"]>input:checked::after, li[data-task="U"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-U);
+}
+.mi.mi-v::after, input[data-task="v"]:checked::after, li[data-task="v"]>input:checked::after, li[data-task="v"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-v);
+}
+.mi.mi-V::after, input[data-task="V"]:checked::after, li[data-task="V"]>input:checked::after, li[data-task="V"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-V);
+}
+.mi.mi-w::after, input[data-task="w"]:checked::after, li[data-task="w"]>input:checked::after, li[data-task="w"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-w);
+}
+.mi.mi-W::after, input[data-task="W"]:checked::after, li[data-task="W"]>input:checked::after, li[data-task="W"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-W);
+}
+.mi.mi-X::after, input[data-task="X"]:checked::after, li[data-task="X"]>input:checked::after, li[data-task="X"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-X);
+}
+.mi.mi-y::after, input[data-task="y"]:checked::after, li[data-task="y"]>input:checked::after, li[data-task="y"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-y);
+}
+.mi.mi-Y::after, input[data-task="Y"]:checked::after, li[data-task="Y"]>input:checked::after, li[data-task="Y"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-Y);
+}
+.mi.mi-z::after, input[data-task="z"]:checked::after, li[data-task="z"]>input:checked::after, li[data-task="z"]>p>input:checked::after 
+{
+    -webkit-mask-image: var(--cl-icon-z);
+}
+.mi.mi-Z::after, input[data-task="Z"]:checked::after, li[data-task="Z"]>input:checked::after, li[data-task="Z"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-Z);
+}
+.mi.mi-⏻::after, .mi.mi-poweroff::after, input[data-task="⏻"]:checked::after, li[data-task="⏻"]>input:checked::after, li[data-task="⏻"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-⏻);
+}
+.mi.mi-⏼::after, .mi.mi-poweron::after, input[data-task="⏼"]:checked::after, li[data-task="⏼"]>input:checked::after, li[data-task="⏼"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-⏼);
+}
+.mi.mi-▦::after, .mi.mi-chessboard::after, input[data-task="▦"]:checked::after, li[data-task="▦"]>input:checked::after, li[data-task="▦"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-▦);
+}
+.mi.mi-→::after, .mi.mi-chessboard::after, input[data-task="→"]:checked::after, li[data-task="→"]>input:checked::after, li[data-task="→"]>p>input:checked::after
+{
+    -webkit-mask-image: var(--cl-icon-→);
+}
+
+
+
+

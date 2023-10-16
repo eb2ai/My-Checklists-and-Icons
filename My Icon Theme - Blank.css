@@ -1,0 +1,209 @@
+/*  Latest version of the blank Icon Template can be found at
+    https://github.com/eb2ai/My-Checklists-and-Icons
+*/
+
+body {
+
+/*  Static Checklist Icons */
+
+  	--cl-icon-space: ; 
+
+	--cl-icon-x: ;
+
+	--cl-icon-slash: ;
+
+	--cl-icon-dash: ;
+
+	--cl-icon-greaterthan: ;
+
+	--mi-icon-lessthan: ;
+
+	--cl-icon-question: ;
+
+	--cl-icon-exclamation: ;
+
+	--cl-icon-asterisk: ;
+
+	--cl-icon-period: ;
+
+	--cl-icon-at: ;
+
+	--cl-icon-hashtag: ;
+
+	--cl-icon-percent: ;
+
+	--cl-icon-ampersand: ;
+
+	--cl-icon-equal: ;
+
+	--cl-icon-plus: ;
+
+	--cl-icon-colon: ;
+
+	--cl-icon-tilde: ;
+
+	--cl-icon-quote: ;
+
+	--cl-icon-0: ;
+
+	--cl-icon-1: ;
+
+	--cl-icon-2: ;
+
+	--cl-icon-3: ;
+
+	--cl-icon-4: ;
+
+	--cl-icon-5: ;
+
+	--cl-icon-6: ;
+
+	--cl-icon-7: ;
+
+	--cl-icon-8: ;
+
+	--cl-icon-9: ;
+
+	--cl-icon-a: ;
+
+	--cl-icon-A: ;
+
+	--cl-icon-b: ;
+
+	--cl-icon-B: ;
+
+	--cl-icon-c: ;
+
+	--cl-icon-C: ;
+
+	--cl-icon-d: ;
+
+	--cl-icon-D: ;
+
+	--cl-icon-e: ;
+
+	--cl-icon-E: ;
+
+	--cl-icon-f: ;
+
+	--cl-icon-F: ;
+
+	--cl-icon-g: ;
+
+	--cl-icon-G: ;
+
+	--cl-icon-h: ;
+
+	--cl-icon-H: ;
+
+	--cl-icon-i: ;
+
+	--cl-icon-I: ;
+
+	--cl-icon-j: ;
+
+	--cl-icon-J: ;
+
+	--cl-icon-k: ;
+
+	--cl-icon-K: ;
+
+	--cl-icon-l: ;
+
+	--cl-icon-L: ;
+
+	--cl-icon-m: ;
+
+	--cl-icon-M: ;
+
+	--cl-icon-n: ;
+
+	--cl-icon-N: ;
+
+	--cl-icon-o: ;
+
+	--cl-icon-O: ;
+
+	--cl-icon-p: ;
+
+	--cl-icon-P: ;
+
+	--cl-icon-q: ;
+
+	--cl-icon-Q: ;
+
+	--cl-icon-r: ;
+
+	--cl-icon-R: ;
+
+	--cl-icon-s: ;
+
+	--cl-icon-S: ;
+
+	--cl-icon-t: ;
+
+	--cl-icon-T: ;
+
+	--cl-icon-u: ;
+
+	--cl-icon-U: ;
+
+	--cl-icon-v: ;
+
+	--cl-icon-V: ;
+
+	--cl-icon-w: ;
+
+	--cl-icon-W: ;
+
+	--cl-icon-x: ;
+
+	--cl-icon-X: ;
+
+	--cl-icon-y: ;
+
+	--cl-icon-Y: ;
+
+	--cl-icon-z: ;
+
+	--cl-icon-Z: ;
+
+	--cl-icon-→: ;
+
+
+/*  Stand-alone Icons not associated with a Checklist */
+
+	--mi-icon-your-name1: ;
+
+	--mi-icon-your-name2: ;
+
+}
+
+
+
+/* 
+	Icons below this point are for your stand-alone icons. Each should refer to an image defined above.
+*/
+	.mi.mi-your-name1:after { 
+		-webkit-mask-image: var(--mi-icon-your-name1); 
+		background-color: #FF00FF; /* You can force a color for any individual icon */
+	}
+
+	.mi.mi-your-name2:after { 
+		-webkit-mask-image: var(--mi-icon-your-name2); 
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
